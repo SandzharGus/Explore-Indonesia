@@ -1,0 +1,21 @@
+@use './vars/vars' as *;
+@use './mixins/mixin' as *;
+@use './com/swiper';
+@use './com/zero';
+@use './com/header';
+@use './com/hero';
+@use './com/walk';
+@use './com/volcano';
+@use './com/white';
+@use './com/life';
+@use './com/photo';
+@use './com/travel';
+@use './com/footer';
+
+
+
+h2{
+    color: $description;
+    @include font(20px, 600, normal)
+}
+

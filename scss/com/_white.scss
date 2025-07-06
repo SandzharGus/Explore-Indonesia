@@ -1,0 +1,68 @@
+@use '../vars/vars' as *;
+@use '../mixins/mixin' as *;
+
+.white {
+    background-image: url(../imgs/white_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1920px;
+    height: 821px;
+
+    h2 {
+        margin: 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &-title {
+        @include title;
+        color: rgba(0, 0, 0, 1);
+        padding-top: 249px;
+        max-width: 614px;
+        text-align: center;
+    }
+
+    &-description {
+        @include description;
+        color: rgba(111, 119, 135, 1);
+        max-width: 470px;
+        text-align: center;
+        margin-top: 32px;
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width:1100px) {
+    .white {
+        background-size: 140% 100%;
+    }
+}
+
+@media (max-width:700px) {
+    .white {
+        background-image: url(../imgs/white_background_mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
+        &-title {
+            @include mobile_title;
+            max-width: 314px;
+        }
+
+        &-description {
+            @include mobile_description;
+            max-width: 314px;
+        }
+    }
+    .learn__more-btn{
+        margin-top: 35;
+        max-width: 314px;
+        height: 73px;
+    }
+}

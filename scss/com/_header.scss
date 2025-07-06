@@ -1,0 +1,33 @@
+@use'../mixins/mixin' as *;
+@use '../vars/vars' as *;
+
+.header {
+    z-index: 9;
+    width: 100%;
+    position: fixed;
+    padding-top: 28px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        align-items: center;
+        display: flex;
+        gap: 60px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 1);
+        @include font(18px, 700, 100%);
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}
